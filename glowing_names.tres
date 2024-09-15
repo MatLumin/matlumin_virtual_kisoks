@@ -1,0 +1,8 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://b2ovml31p5mxs"]
+
+[resource]
+vertex_color_is_srgb = true
+emission_enabled = true
+emission = Color(0.46135, 0.922598, 0.732186, 1)
+rim_enabled = true
+grow = true

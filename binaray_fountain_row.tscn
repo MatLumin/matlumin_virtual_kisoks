@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo7mn3dpvs6wc"]
+
+[ext_resource type="PackedScene" uid="uid://cbrqlw3yvv0uf" path="res://binary_fountain.tscn" id="1_yyuxy"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.131101)
+
+[node name="Node3D2" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.401306)
+
+[node name="Node3D3" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.682803)
+
+[node name="Node3D4" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.742104)
+
+[node name="Node3D5" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.471899)
+
+[node name="Node3D6" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.190402)
+
+[node name="Node3D7" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.949306)
+
+[node name="Node3D8" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.21951)
+
+[node name="Node3D9" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.50101)
+
+[node name="Node3D10" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.61486)
+
+[node name="Node3D11" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.34466)
+
+[node name="Node3D12" parent="." instance=ExtResource("1_yyuxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.06316)

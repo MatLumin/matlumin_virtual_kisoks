@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://dstq2dcatbiox"]
+
+[ext_resource type="Script" path="res://views_count.gd" id="1_q3iwu"]
+[ext_resource type="Material" uid="uid://b2ovml31p5mxs" path="res://glowing_names.tres" id="2_y7cmi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_50s15"]
+size = Vector3(4, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p6d22"]
+size = Vector3(0.1, 1.3, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_113se"]
+albedo_color = Color(0.00566115, 0.00566115, 0.00566115, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_12x6c"]
+material = SubResource("StandardMaterial3D_113se")
+size = Vector3(4, 1.3, 0.1)
+
+[sub_resource type="TextMesh" id="TextMesh_gdvvs"]
+material = ExtResource("2_y7cmi")
+text = "تعداد بازدید : 👁️"
+font_size = 30
+
+[sub_resource type="TextMesh" id="TextMesh_nwq6k"]
+material = ExtResource("2_y7cmi")
+text = "000
+"
+font_size = 50
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_q3iwu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0399798, 0)
+mesh = SubResource("BoxMesh_50s15")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00664234, 1.24526, -0.00235415)
+mesh = SubResource("BoxMesh_50s15")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9876, 0.64259, 0)
+mesh = SubResource("BoxMesh_p6d22")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.953, 0.64259, 0)
+mesh = SubResource("BoxMesh_p6d22")
+
+[node name="display" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0529534, 0.64259, -0.0881926)
+mesh = SubResource("BoxMesh_12x6c")
+skeleton = NodePath("../MeshInstance3D4")
+
+[node name="title" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.11736, 0.936743, -0.0590698)
+mesh = SubResource("TextMesh_gdvvs")
+
+[node name="value" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.117678, 0.383371, -0.0590698)
+mesh = SubResource("TextMesh_nwq6k")
+skeleton = NodePath("../title")

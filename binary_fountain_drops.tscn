@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://31m3mafw6syu"]
+
+[ext_resource type="Script" path="res://binary_fountain_drops.gd" id="1_jrsbj"]
+[ext_resource type="Material" uid="uid://b2ovml31p5mxs" path="res://glowing_names.tres" id="2_oyln2"]
+
+[sub_resource type="TextMesh" id="TextMesh_b3tit"]
+material = ExtResource("2_oyln2")
+text = "1
+"
+font_size = 30
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_jrsbj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TextMesh_b3tit")

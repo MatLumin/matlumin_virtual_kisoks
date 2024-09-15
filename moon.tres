@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://k3vjtxqdynam"]
+
+[resource]
+emission_enabled = true
+rim_enabled = true
+rim = 0.45
+rim_tint = 0.4

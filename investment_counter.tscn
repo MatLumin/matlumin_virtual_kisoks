@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://dm2dx2qq0mv61"]
+
+[ext_resource type="Script" path="res://investment_counter.gd" id="1_q326g"]
+[ext_resource type="Material" uid="uid://cn37a5mwivtn6" path="res://gold_light.tres" id="2_wjm1f"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cg38p"]
+size = Vector3(4, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k7fl3"]
+size = Vector3(0.1, 1.3, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6bl8t"]
+albedo_color = Color(0.00566115, 0.00566115, 0.00566115, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lu14a"]
+material = SubResource("StandardMaterial3D_6bl8t")
+size = Vector3(4, 1.3, 0.1)
+
+[sub_resource type="TextMesh" id="TextMesh_4wabc"]
+material = ExtResource("2_wjm1f")
+text = "سرماه گزاری های جذب شده:"
+font_size = 19
+
+[sub_resource type="TextMesh" id="TextMesh_cqkon"]
+material = ExtResource("2_wjm1f")
+text = "تومن"
+
+[sub_resource type="TextMesh" id="TextMesh_dpaje"]
+material = ExtResource("2_wjm1f")
+text = "100000000"
+font_size = 43
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_q326g")
+
+[node name="border4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0399798, 0)
+mesh = SubResource("BoxMesh_cg38p")
+
+[node name="border3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00664234, 1.24526, -0.00235415)
+mesh = SubResource("BoxMesh_cg38p")
+
+[node name="border2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9876, 0.64259, 0)
+mesh = SubResource("BoxMesh_k7fl3")
+
+[node name="border1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.953, 0.64259, 0)
+mesh = SubResource("BoxMesh_k7fl3")
+
+[node name="display" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0529534, 0.64259, -0.0881926)
+mesh = SubResource("BoxMesh_lu14a")
+skeleton = NodePath("../border1")
+
+[node name="title" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.01782, -0.0486277)
+mesh = SubResource("TextMesh_4wabc")
+
+[node name="curreny" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53917, 0.458624, -0.0550972)
+mesh = SubResource("TextMesh_cqkon")
+
+[node name="investment_counter" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.234386, 0.450285, -0.0259415)
+mesh = SubResource("TextMesh_dpaje")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.978444, 0.114934)

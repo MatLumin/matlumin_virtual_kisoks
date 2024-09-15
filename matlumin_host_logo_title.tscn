@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv7faked6x6sd"]
+
+[ext_resource type="Material" uid="uid://b2ovml31p5mxs" path="res://glowing_names.tres" id="1_w8m8f"]
+
+[sub_resource type="TextMesh" id="TextMesh_vis8p"]
+material = ExtResource("1_w8m8f")
+text = "متین هاست
+MatinHost
+"
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TextMesh_vis8p")

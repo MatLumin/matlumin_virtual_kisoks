@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqqhwdfcdua8e"]
+
+[ext_resource type="Script" path="res://Visitor.gd" id="1_1rl14"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_exp0y"]
+radius = 0.1775
+height = 0.765
+rings = 83
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.302917, 0)
+current = true
+script = ExtResource("1_1rl14")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0719552, 0.178417)
+mesh = SubResource("CapsuleMesh_exp0y")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.269272)

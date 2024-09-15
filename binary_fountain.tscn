@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbrqlw3yvv0uf"]
+
+[ext_resource type="Script" path="res://binary_fountain.gd" id="1_i42kj"]
+[ext_resource type="Material" uid="uid://b2ovml31p5mxs" path="res://glowing_names.tres" id="2_j28yk"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_82yqq"]
+material = ExtResource("2_j28yk")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.1
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_i42kj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00512847, 0)
+mesh = SubResource("CylinderMesh_82yqq")

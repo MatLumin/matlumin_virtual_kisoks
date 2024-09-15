@@ -1,0 +1,11 @@
+[gd_resource type="ORMMaterial3D" load_steps=3 format=3 uid="uid://cdfl4vc7c5vpr"]
+
+[ext_resource type="Texture2D" uid="uid://da6mhct6cwbwr" path="res://textures/brick_1/bricks_0014_color_1k.jpg" id="1_lhd8i"]
+[ext_resource type="Texture2D" uid="uid://d1u3e4yrkqvbs" path="res://textures/brick_1/bricks_0014_normal_directx_1k.png" id="2_myf8r"]
+
+[resource]
+albedo_texture = ExtResource("1_lhd8i")
+normal_enabled = true
+normal_texture = ExtResource("2_myf8r")
+ao_enabled = true
+uv1_scale = Vector3(2, 2, 2)

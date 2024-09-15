@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfauo8hrniu6h"]
+
+[ext_resource type="Material" uid="uid://k3vjtxqdynam" path="res://moon.tres" id="1_ryygt"]
+[ext_resource type="Script" path="res://fake_moon.gd" id="2_7ohag"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_r27nj"]
+material = ExtResource("1_ryygt")
+radius = 50.0
+height = 100.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35.9927, 0)
+mesh = SubResource("SphereMesh_r27nj")
+script = ExtResource("2_7ohag")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35.8264, 0)
+light_energy = 10.0
+light_indirect_energy = 20.0
+light_volumetric_fog_energy = 20.0
+light_size = 10.0

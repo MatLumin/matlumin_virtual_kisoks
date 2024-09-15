@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://dc2oknnvtuydf"]
+
+[ext_resource type="Script" path="res://visitor.gd" id="1_ftm2r"]
+[ext_resource type="Material" uid="uid://82873qlwo0ax" path="res://visitor.tres" id="2_3h0rv"]
+
+[sub_resource type="TextMesh" id="TextMesh_tqocx"]
+material = ExtResource("2_3h0rv")
+text = "mat"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4ohq"]
+disable_fog = true
+albedo_color = Color(0.662303, 0.97799, 0.652363, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_v0auu"]
+material = SubResource("StandardMaterial3D_l4ohq")
+radius = 0.1
+height = 0.185
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_exp0y"]
+material = ExtResource("2_3h0rv")
+radius = 0.1775
+height = 0.765
+radial_segments = 189
+rings = 83
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_ftm2r")
+
+[node name="NameDisplay" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0103745, 0.851532, -0.021673)
+mesh = SubResource("TextMesh_tqocx")
+
+[node name="Head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.86619e-05, 0.678444, -0.000301003)
+mesh = SubResource("SphereMesh_v0auu")
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689745, 0)
+
+[node name="Torso" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.708482, 0, 0, 0, 0.708482, 0, 0, 0, 0.708482, 0, 0.325725, 0)
+mesh = SubResource("CapsuleMesh_exp0y")
+skeleton = NodePath("")

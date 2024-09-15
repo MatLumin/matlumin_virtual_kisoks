@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi8yraveovwc4"]
+
+[ext_resource type="Material" uid="uid://dsbmmr1b7dsl7" path="res://glass_1.tres" id="1_u0nhc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_neltf"]
+material = ExtResource("1_u0nhc")
+size = Vector3(2, 2, 0.1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.979596, 1.06219, -0.00221491)
+mesh = SubResource("BoxMesh_neltf")

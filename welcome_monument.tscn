@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2u147yq0otpp"]
+
+[ext_resource type="Material" uid="uid://b6ugcb2pagaku" path="res://concrete_1.tres" id="1_s0lwp"]
+[ext_resource type="Material" uid="uid://b2ovml31p5mxs" path="res://glowing_names.tres" id="2_yddyq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xbix"]
+material = ExtResource("1_s0lwp")
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="TextMesh" id="TextMesh_mllul"]
+material = ExtResource("2_yddyq")
+text = "welcome to this very interesting show"
+font_size = 9
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114031, 0.842398, 0.0328008)
+mesh = SubResource("BoxMesh_0xbix")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114031, 1.06092, 0.0647947)
+mesh = SubResource("TextMesh_mllul")
+skeleton = NodePath("../MeshInstance3D")

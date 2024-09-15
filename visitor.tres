@@ -1,0 +1,7 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://82873qlwo0ax"]
+
+[resource]
+vertex_color_is_srgb = true
+albedo_color = Color(0, 1, 1, 1)
+emission_enabled = true
+grow = true

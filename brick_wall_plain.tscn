@@ -1,0 +1,36 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0y6vx640bk81"]
+
+[ext_resource type="Texture2D" uid="uid://da6mhct6cwbwr" path="res://textures/brick_1/bricks_0014_color_1k.jpg" id="1_3hier"]
+[ext_resource type="Texture2D" uid="uid://datfbacdrva4f" path="res://textures/brick_1/bricks_0014_ao_1k.jpg" id="2_yt0hi"]
+[ext_resource type="Texture2D" uid="uid://bealcnpir7cg0" path="res://textures/brick_1/bricks_0014_height_1k.png" id="3_pya4x"]
+[ext_resource type="Texture2D" uid="uid://12j8xsoeht55" path="res://textures/brick_1/bricks_0014_roughness_1k.jpg" id="4_dqx2q"]
+[ext_resource type="Texture2D" uid="uid://d1u3e4yrkqvbs" path="res://textures/brick_1/bricks_0014_normal_directx_1k.png" id="5_la6vo"]
+[ext_resource type="PackedScene" uid="uid://bgefjuarl4tiy" path="res://wall_light.tscn" id="6_mp1j7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghgjy"]
+albedo_color = Color(0.404511, 0.404511, 0.404511, 1)
+albedo_texture = ExtResource("1_3hier")
+metallic = 1.0
+metallic_texture = ExtResource("4_dqx2q")
+roughness_texture = ExtResource("4_dqx2q")
+normal_enabled = true
+normal_texture = ExtResource("5_la6vo")
+ao_enabled = true
+ao_texture = ExtResource("2_yt0hi")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_pya4x")
+uv1_scale = Vector3(2, 2, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gm44c"]
+material = SubResource("StandardMaterial3D_ghgjy")
+uv2_padding = 1.7
+size = Vector3(3, 2, 0.2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51607, 0.953539, 0)
+mesh = SubResource("BoxMesh_gm44c")
+
+[node name="Node3D" parent="." instance=ExtResource("6_mp1j7")]
+transform = Transform3D(-0.00520097, 0.499973, 0, -0.499973, -0.00520097, 0, 0, 0, 0.5, -1.45684, 1.76753, 0.472361)
