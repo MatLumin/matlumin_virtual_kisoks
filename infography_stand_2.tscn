@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceqlq836k4ssu"]
+
+[ext_resource type="PackedScene" uid="uid://rkdk6ov2epo4" path="res://info_graphy_stand_base.tscn" id="1_p3kyo"]
+[ext_resource type="Texture2D" uid="uid://t6srkfvv2sj1" path="res://textures/info_graphics/2.jpg" id="2_6crmu"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_p3kyo")]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-4.89943e-09, 0, 0.195, 0, 0.107003, 0, -0.112086, 0, -8.52372e-09, 0.0929646, -0.218269, 0)
+texture = ExtResource("2_6crmu")

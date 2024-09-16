@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://clpqmbbhiploh"]
+
+[ext_resource type="Material" uid="uid://3hjgkstnwc5h" path="res://metal_1.tres" id="1_06qro"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nbvxe"]
+material = ExtResource("1_06qro")
+size = Vector3(0.995, 0.105, 0.57)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kvhck"]
+albedo_color = Color(0.226707, 0.226707, 0.226707, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_bd7j8"]
+material = SubResource("StandardMaterial3D_kvhck")
+text = "نمونه سرور های مورد
+ استفاده در هاستیگ"
+font_size = 11
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vimr4"]
+material = ExtResource("1_06qro")
+top_radius = 0.1
+bottom_radius = 0.1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_55k26"]
+material = ExtResource("1_06qro")
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.1
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.68762, -0.726071, 0, 0.726071, 0.68762, 0, 1.02585, 0)
+mesh = SubResource("BoxMesh_nbvxe")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 1.10939, -0.0232813)
+mesh = SubResource("TextMesh_bd7j8")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.135984)
+mesh = SubResource("CylinderMesh_vimr4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.02372, -0.134127)
+mesh = SubResource("CylinderMesh_55k26")

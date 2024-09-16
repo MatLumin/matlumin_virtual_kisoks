@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://ft5bjvcqd52t"]
+
+[ext_resource type="Script" path="res://decoy_actor.gd" id="1_uicpb"]
+[ext_resource type="Material" uid="uid://b2ovml31p5mxs" path="res://glowing_names.tres" id="2_6k0no"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_xr1kn"]
+radius = 0.15
+height = 0.6
+
+[sub_resource type="SphereMesh" id="SphereMesh_d6rwy"]
+radius = 0.2
+height = 0.415
+
+[sub_resource type="TextMesh" id="TextMesh_43tgm"]
+material = ExtResource("2_6k0no")
+text = "تکنسین"
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7h03c"]
+radius = 0.08
+height = 0.465
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_uicpb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.124438, 0)
+mesh = SubResource("CapsuleMesh_xr1kn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.84, 0, 0, 0, 0.785, 0, 0, 0, 0.84, 0.00408244, 0.465538, 0.00527227)
+mesh = SubResource("SphereMesh_d6rwy")
+
+[node name="title" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.200548, 0.00191874, 0.979682, 0.0533653, 0.998535, 0.00896859, -0.978229, 0.0540796, -0.200357, 0, 0.926915, 0)
+mesh = SubResource("TextMesh_43tgm")
+
+[node name="arm" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.945217, -0.326443, 0, 0.326443, 0.945217, 0, 0.240499, -0.234)
+mesh = SubResource("CapsuleMesh_7h03c")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="arm2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.974315, 0.225189, 0, -0.225189, 0.974315, 0, 0.206542, 0.261423)
+mesh = SubResource("CapsuleMesh_7h03c")
+skeleton = NodePath("../MeshInstance3D")

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://3hjgkstnwc5h"]
+
+[ext_resource type="Texture2D" uid="uid://7vvqp3n6pco6" path="res://textures/metal_1/1K-metal_1-diffuse.jpg" id="1_kxjom"]
+[ext_resource type="Texture2D" uid="uid://bs0680ift16uc" path="res://textures/metal_1/1K-metal_1-ao.jpg" id="2_m83jt"]
+[ext_resource type="Texture2D" uid="uid://cfuymvm1frcrr" path="res://textures/metal_1/1K-metal_1-specular.jpg" id="3_l1hb7"]
+[ext_resource type="Texture2D" uid="uid://cgd7kvydenkmb" path="res://textures/metal_1/1K-metal_1-normal.jpg" id="4_w5l3d"]
+
+[resource]
+albedo_texture = ExtResource("1_kxjom")
+metallic = 1.0
+metallic_texture = ExtResource("3_l1hb7")
+roughness_texture = ExtResource("3_l1hb7")
+normal_enabled = true
+normal_scale = -0.5
+normal_texture = ExtResource("4_w5l3d")
+ao_enabled = true
+ao_light_affect = 0.9
+ao_texture = ExtResource("2_m83jt")

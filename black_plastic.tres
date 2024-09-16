@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://civb054tlcn66"]
+
+[ext_resource type="Texture2D" uid="uid://ck7nr7mid2je6" path="res://textures/black_plastic_1/1K-black_plastic_basecolor.png" id="1_w3aq7"]
+[ext_resource type="Texture2D" uid="uid://c0ace7hvngxj7" path="res://textures/black_plastic_1/1K-black_plastic_ambientocclusion.png" id="2_hpikn"]
+[ext_resource type="Texture2D" uid="uid://c5jnq1scg61xg" path="res://textures/black_plastic_1/1K-black_plastic_height.png" id="3_w8frp"]
+[ext_resource type="Texture2D" uid="uid://b076fejroyytt" path="res://textures/black_plastic_1/1K-black_plastic_metallic.png" id="4_4wuhy"]
+[ext_resource type="Texture2D" uid="uid://doqqnxi84y0df" path="res://textures/black_plastic_1/1K-black_plastic_normal.png" id="5_175av"]
+[ext_resource type="Texture2D" uid="uid://bnek2najjwojb" path="res://textures/black_plastic_1/1K-black_plastic_roughness.png" id="6_8t5kd"]
+
+[resource]
+albedo_texture = ExtResource("1_w3aq7")
+metallic = 1.0
+metallic_texture = ExtResource("4_4wuhy")
+roughness_texture = ExtResource("6_8t5kd")
+normal_enabled = true
+normal_texture = ExtResource("5_175av")
+ao_enabled = true
+ao_texture = ExtResource("2_hpikn")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_w8frp")
+uv1_scale = Vector3(2.73, 2.73, 2.73)

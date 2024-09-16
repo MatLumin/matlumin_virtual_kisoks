@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://rkdk6ov2epo4"]
+
+[ext_resource type="Material" uid="uid://civb054tlcn66" path="res://black_plastic.tres" id="1_xegag"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qkaln"]
+material = ExtResource("1_xegag")
+top_radius = 0.03
+bottom_radius = 0.03
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ru6pe"]
+material = ExtResource("1_xegag")
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_rondu"]
+material = ExtResource("1_xegag")
+size = Vector3(0.01, 1, 2)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0308672, -0.432997, 0)
+mesh = SubResource("CylinderMesh_qkaln")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.02916, 0)
+mesh = SubResource("CylinderMesh_ru6pe")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0811933, 0.129541, 0)
+visible = false
+mesh = SubResource("BoxMesh_rondu")

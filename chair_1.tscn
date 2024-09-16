@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkfueykq7kwwl"]
+
+[ext_resource type="Material" uid="uid://civb054tlcn66" path="res://black_plastic.tres" id="1_5esgl"]
+[ext_resource type="Material" uid="uid://30sl34qp3xy1" path="res://ground.tres" id="2_8pju1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_j4qiw"]
+material = ExtResource("1_5esgl")
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_buve0"]
+material = ExtResource("1_5esgl")
+size = Vector3(0.68, 0.03, 0.515)
+
+[sub_resource type="BoxMesh" id="BoxMesh_41srf"]
+material = ExtResource("2_8pju1")
+size = Vector3(0.585, 0.05, 0.405)
+
+[sub_resource type="BoxMesh" id="BoxMesh_alm87"]
+material = ExtResource("1_5esgl")
+size = Vector3(0.815, 0.04, 0.365)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="leg_1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.513727, 0, 0, 0, 0.475072, 0, 0, 0, 0.669367, 0.12539, 0.364413, -0.142207)
+mesh = SubResource("CylinderMesh_j4qiw")
+
+[node name="base" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.513727, 0, 0, 0, 0.475072, 0, 0, 0, 0.669367, -0.0251318, 0.506028, 0.0030334)
+mesh = SubResource("BoxMesh_buve0")
+
+[node name="cushin" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.513727, 0, 0, 0, 0.475072, 0, 0, 0, 0.669367, -0.0251318, 0.525125, 0.0030334)
+mesh = SubResource("BoxMesh_41srf")
+
+[node name="back" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0633501, -0.536918, 0, 0.438535, -0.0775623, 0, 0, 0, 0.669367, -0.190517, 0.680489, 0.0030334)
+mesh = SubResource("BoxMesh_alm87")
+skeleton = NodePath("../cushin")
+
+[node name="leg_3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.513727, 0, 0, 0, 0.475072, 0, 0, 0, 0.669367, -0.181089, 0.36818, -0.137931)
+mesh = SubResource("CylinderMesh_j4qiw")
+
+[node name="leg_4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.513727, 0, 0, 0, 0.475072, 0, 0, 0, 0.669367, 0.12539, 0.37, 0.168599)
+mesh = SubResource("CylinderMesh_j4qiw")
+
+[node name="leg_5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.513727, 0, 0, 0, 0.475072, 0, 0, 0, 0.669367, -0.190688, 0.362069, 0.166661)
+mesh = SubResource("CylinderMesh_j4qiw")
