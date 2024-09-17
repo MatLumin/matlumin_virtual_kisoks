@@ -6,6 +6,6 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 blend_mode = 1
 diffuse_mode = 1
-albedo_color = Color(0.204115, 0.801778, 0.801759, 1)
+albedo_color = Color(0.0901961, 0.423529, 0.423529, 1)
 clearcoat_enabled = true
 backlight_enabled = true

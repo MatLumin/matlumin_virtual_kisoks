@@ -3,7 +3,7 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i1 in range(5):
+	for i1 in range(1):
 		var drop = load("res://binary_fountain_drops.tscn").instantiate();
 		self.add_child(drop);
 		drop.global_position = self.global_position;

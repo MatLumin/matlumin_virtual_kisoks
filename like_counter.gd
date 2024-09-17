@@ -8,5 +8,5 @@ func _ready():
 
 var count = 0;
 func _process(delta):
-	count += (round(randf_range(0.0, 0.51)));
+	count += (round(randf_range(0.0, 0.509)));
 	$value.mesh.text = str(count);
